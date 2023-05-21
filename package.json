@@ -5,10 +5,10 @@
     "npm": ">=9.5.1",
     "node": ">=18.16.0"
   },
-  "type": "module",
   "description": "",
   "main": "main.ts",
   "scripts": {
+    "local": "cross-env NODE_ENV=local nodemon -i dist/ -e ts,js -x ts-node ./src/main.ts",
     "test": "echo \"No tests!\""
   },
   "repository": {
@@ -24,13 +24,22 @@
     "url": "https://github.com/eriott/access-control-system/issues"
   },
   "homepage": "https://github.com/eriott/access-control-system#readme",
+  "dependencies": {
+    "@nestjs/common": "9.4.1",
+    "@nestjs/core": "9.4.1",
+    "@nestjs/platform-fastify": "9.4.1",
+    "cross-env": "7.0.3"
+  },
   "devDependencies": {
+    "@types/node": "20.2.1",
     "@typescript-eslint/eslint-plugin": "5.59.6",
     "eslint": "8.41.0",
     "eslint-config-standard-with-typescript": "34.0.1",
     "eslint-plugin-import": "2.27.5",
     "eslint-plugin-n": "15.7.0",
     "eslint-plugin-promise": "6.1.1",
+    "nodemon": "2.0.22",
+    "ts-node": "10.9.1",
     "typescript": "5.0.4"
   }
 }
